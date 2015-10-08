@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title> - jsFiddle demo</title>
+
+    <script type='text/javascript' src='assets/plugins/jquery/jquery.js'></script>
+
+
+
+
+
+
+
+
+
+    <script type='text/javascript'>//<![CDATA[
+    $(function(){
+        $('.filters, .continents-wrap').delegate('input[type=checkbox]', 'change', function () {
+            var $lis = $('.items > div'),
+                    $checked = $('input:checked');
+            if ($checked.length) {
+                var selector = '';
+                $($checked).each(function (index, element) {
+                    if (selector === '') {
+                        selector += "[data-category~='" + element.id + "']";
+                    } else {
+                        selector += ",[data-category~='" + element.id + "']";
+                    }
+                });
+                $lis.hide();
+                console.log(selector);
+                $('.items > div').filter(selector).show();
+            } else {
+                $lis.show();
+            }
+        });
+    });//]]>
+
+    </script>
+
+
+</head>
+<body>
+<div class="filters">
+    <h3 style="font-size:14px; font-weight:normal;">Available Flowers</h3>
+
+    <p style="font-size:12px;"><strong>Filter flowers by colour:</strong>
+
+    </p>
+    <form>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="red" />Red</label>
+        <br>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="yellow" />Yellow</label>
+        <br>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="pink" />Pink</label>
+        <br>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="purple" />Purple</label>
+        <br>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="green" />Green</label>
+        <br>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="other" />Other</label>
+    </form>
+    <p style="font-size:12px;"><strong>Filter flowers by size:</strong>
+
+    </p>
+    <form>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="tiny" />Tiny</label>
+        <br>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="small" />Small</label>
+        <br>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="medium" />Medium</label>
+        <br>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="large" />Large</label>
+        <br>
+        <label style="font-size:12px;">
+            <input type="checkbox" id="giant" />Giant</label>
+    </form>
+</div>
+<div class="continents-wrap">
+    <h3 style="font-size:14px; font-weight:normal;">Available Continents</h3>
+
+    <div class="continents" style="font-size:12px;">
+        <div>Africa
+            <input type="checkbox" id="africa" />
+        </div>
+        <div>Europe
+            <input type="checkbox" id="europe" />
+        </div>
+        <div>Asia
+            <input type="checkbox" id="asia" />
+        </div>
+        <div>North America
+            <input type="checkbox" id="north-america" />
+        </div>
+        <div>South America
+            <input type="checkbox" id="south-america" />
+        </div>
+        <div>Antarctica
+            <input type="checkbox" id="antarctica" />
+        </div>
+        <div>Australasia
+            <input type="checkbox" id="australasia" />
+        </div>
+    </div>
+</div>
+<div class="abc 123 flowers items">
+    <div class="123">
+    <div class="flower"  data-category="green small medium africa"><div>abc
+    <div>123</div></div></div>
+    </div>
+    <div class="flower"  data-category="purple green medium africa europe">Lavender</div>
+    <div class="flower"  data-category="green large africa europe asia">Stinging Nettle<div>1</div></div>
+    <div class="flower" data-category="green yellow large europe">Gorse<div>2</div></div>
+    <div class="flower" data-category=" large asia">Hemp</div>
+    <div class="flower" data-category="purple other giant asia">Titan Arum</div>
+    <div class="flower"  data-category=" yellow large australasia">Golden Wattle</div>
+    <div class="flower"  data-category="purple  other medium north-america">Purple Prairie Clover</div>
+    <div class="flower" data-category="pink other large north-america">Camellia</div>
+    <div class="flower"  data-category="red medium north-america">Scarlet Carnation</div>
+    <div class="flower" data-category="red medium north-america">Indian Paintbrush</div>
+    <div class="flower"  data-category="purple other small south-america">Moss Verbena</div>
+    <div class="flower"  data-category="blue tiny south-america">Climbing Dayflower</div>
+    <div class="flower"  data-category=" yellow large antarctica">Antarctic Pearlwort</div>
+</div>
+
+</body>
+
+
+</html>
+
+
