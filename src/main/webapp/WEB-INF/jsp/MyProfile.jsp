@@ -1,284 +1,243 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="utf-8"/>
-    <title>planber | User Account</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta content="" name="description"/>
-    <meta content="" name="author"/>
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
-    <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
-    <link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
-    <!-- END GLOBAL MANDATORY STYLES -->
-    <!-- BEGIN PAGE LEVEL STYLES -->
-    <link href="assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/admin/pages/css/profile.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
-    <!-- END PAGE LEVEL STYLES -->
-    <!-- BEGIN THEME STYLES -->
-    <link href="assets/global/css/components-md.css" id="style_components" rel="stylesheet" type="text/css"/>
-    <link href="assets/global/css/plugins-md.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/admin/layout4/css/layout.css" rel="stylesheet" type="text/css"/>
-    <link id="style_color" href="assets/admin/layout4/css/themes/light.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/admin/layout4/css/custom.css" rel="stylesheet" type="text/css"/>
-    <!-- END THEME STYLES -->
-    <link rel="shortcut icon" href="favicon.ico"/>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>Profile Page | Unify - Responsive Website Template</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Web Fonts -->
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets/plugins/animate.css">
+    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="assets/css/pages/profile.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
-<body class="page-md">
-<div class="page-container">
+<body>
 
-    <div class="page-content">
-        <div class="container">
-            <!--BEGIN PAGE HEAD             -->
-            <div class="page-head">
-                <!--BEGIN PAGE TITLE-->
-                <div class="page-title">
-                    <h1>User Account</h1>
-                </div>
-                <!--END PAGE TITLE-->
+<div class="Wrapper">
+
+    <div class="container contet profile">
+        <div class="row">
+            <div class="col-md-3 md-margin-bottom-40">
+                <img class="img-responsive profile-img margin-bottom-20" src="assets/img/team/img1-md.jpg" alt=""/>
+                <ul class="list-group sidebar-nav-v1 margin-bottom-40" id="sidebar-nav-1">
+                    <li class="list-group-item active">
+                        <a href="page_profile.html"><i class="fa fa-bar-chart-o">Overall</i></a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="page_proflie_me.html"><i class="fa fa-user"></i>Profile</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="page_profile_projects.html"><i class="fa fa-group"></i>Users</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="page_profile_projets.html"><i class="fa fa-cubes"></i>My Projects</a>
+                    </li>
+
+                </ul>
+                <div class="margin-bottom-50"></div>
+                <form action="#" id="sky-form2" class="sky-form">
+                    <div id="inline-start"></div>
+                </form>
             </div>
-            <!--END PAGE HEAD>-->
-            <!--BEGIN PAGE CONTENT-->
-            <div class="row">
-                <div class="col-md-12">
-                    <!--BEGIN PROFILE SIDEBAR-->
-                    <div class="profile-sidebar" style="width: 250px;">
-                        <!--BEGIN PORTLET MAIN-->
-                        <div class="portlet light profile-sidebar-portlet">
-                            <!--SIDEBAR USERPIC-->
-                            <div class="profile-userpic">
-                                <img src="assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt=""/>
-                            </div>
-                            <!--END SIDEBAR USERPIC-->
-                            <!--BEGIN SIDEBAR USER TITLE-->
-                            <div class="profile-usertitle">
-                                <div class="profile-usertitle-name">
-                                    User Name
-                                </div>
-                            </div>
-                            <!--END SIDEBAR USER TITLE-->
-                            <!--BEGIN SIDEBAR BUTTONS-->
-                            <div class="profile-userbuttons">
-                                <button type="button" class="btn btn-block green-haze btn-sm">Follow</button>
-                            </div>
-                            <!--END SIDEBAR BUTTONS-->
-                            <!--BEGIN SIDEBAR MENU-->
-                            <div class="profile-usermenu">
-                                <ul class="nav">
-                                    <li>
-                                        <a href="#"><i class="icon-home"></i>Overview</a>
-                                    </li>
-                                    <li>
-                                        <a href="hoy"><i class="icon-settings"></i>Account Settings</a>
-                                    </li>
-                                    <li >
-                                        <a href="hoy"><i class="icon-info"></i>Help</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--END SIDEBAR MENU-->
-                        </div>
-                        <!--END PORTLET MAIN-->
-                        <!--BEGIN PORTLET MAIN-->
-                        <div class="portlet light">
-                            <!--BEGIN STAT-->
-                            <div class="row list-separated profile-stat">
-                                <div class="col-md-6 col-sm-4 col-xs-6">
-                                    <div class="uppercase profile-stat-title">
-                                        37
-                                    </div>
-                                    <div class="uppercase profile-stat-text">
-                                        Plans
-                                    </div>
-                                </div>
 
-                                <div class="col-md-6 col-sm-4 col-xs-6">
-                                    <div class="uppercase profile-stat-title">
-                                        11
+            <div class="col-md-9">
+                <div class="profile-body">
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-6 sm-margin-bottom-20">
+                            <div class="service-block-v3 service-block-u">
+                                <i class="icon-users"></i>
+                                <span class="service-heading">Overall Visits</span>
+                                <span class="counter">12,1111</span>
+
+                                <div class="clearfix margin-bottom-10"></div>
+
+                                <div class="row margin-bottom-20">
+                                    <div class="col-xs-6 service-in">
+                                        <small>Last Week</small>
+                                        <h4 class="counter">1,333</h4>
                                     </div>
-                                    <div class="uppercase profile-stat-text">
-                                        Follwers
+                                    <div class="col-xs-6 text-right service-in">
+                                        <small>Last Month</small>
+                                        <h4 class="counter">1123333</h4>
                                     </div>
                                 </div>
                             </div>
-                            <!--END STAT-->
-
                         </div>
-                        <!--END PORTLET MAIN-->
+                        <div class="col-sm-6">
+                            <div class="service-block-v3 service-block-blue">
+                                <i class="icon-screen-desktop"></i>
+                                <span class="service-heading">Overall Page Views</span>
+                                <span class="counter">324.056</span>
+                                <div class="clearfix margin-bottom-10"></div>
+
+                                <div class="row margin-bottom-20">
+                                    <div class="col-xs-6 service-in">
+                                        <small>Last Week</small>
+                                        <h4 class="counter">26.904</h4>
+                                    </div>
+                                    <div class="col-xs-6 text-right service-in">
+                                        <small>Last Mounth</small>
+                                        <h4 class="counter">124,766</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!--END PROFILE SIDEBAR-->
-                    <!--BEGIN PROFILE CONTENT-->
-                    <div class="profile-content">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="portlet light">
-                                    <div class="portlet-title">
-                                        <div class="caption caption-md">
-                                            <i class="icon-bar-chart theme-font hide"></i>
-                                            <span class="caption-subject font-blue-madison bold uppercase">Your Plans</span>
+
+                    <hr>
+
+
+
+                    <div class="row margin-bottom-20">
+                        <div class="col-sm-6">
+                            <div class="panel panel-profile no-bg">
+                                <div class="panel-heading overflow-h">
+                                    <h2 class="panel-title heading-sm pull-left">
+                                        <i class="fa fa-pencil"></i>Notes
+                                    </h2>
+
+                                </div>
+                                <div id="scrollbar" class="panel-body no-padding mCustomScrollbar" data-mcs-thema="minimal-dark">
+                                    <!-- Item -->
+                                    <div class="profile-post color-one">
+                                        <span class="profile-post-numb">01</span>
+                                        <div class="profile-post-in">
+                                            <h3 class="heading-xs"><a href="#">Creative Blog</a></h3>
+                                            <p>How to marke yourself as a freelance desinger</p>
                                         </div>
                                     </div>
-                                    <div class="portlet-body">
-                                        <div class="table-scrollable table-scrollable-borderless">
-                                            <table class="table table-hover table-light">
-                                                <thead>
-                                                <tr class="uppercase">
-                                                    <th>type</th>
-                                                    <th>NAME</th>
-                                                    <th>Deaprture date</th>
-                                                    <th>days</th>
-                                                    <th>destination</th>
-                                                    <th>description</th>
-                                                    <th>Done</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>Bussiness</td>
-                                                    <td>100일 여행</td>
-                                                    <td>2015.09.09</td>
-                                                    <td>2 Days</td>
-                                                    <td>강원도</td>
-                                                    <td>유라랑 강원도로 떠나는 100일 여행 출발출발 </td>
-                                                    <td>Complete</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Bussiness</td>
-                                                    <td>100일 여행</td>
-                                                    <td>2015.09.09</td>
-                                                    <td>2 Days</td>
-                                                    <td>강원도</td>
-                                                    <td>유라랑 강원도로 떠나는 100일 여행 출발출발 </td>
-                                                    <td>Complete</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Bussiness</td>
-                                                    <td>100일 여행</td>
-                                                    <td>2015.09.09</td>
-                                                    <td>2 Days</td>
-                                                    <td>강원도</td>
-                                                    <td>유라랑 강원도로 떠나는 100일 여행 출발출발 </td>
-                                                    <td>Complete</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Bussiness</td>
-                                                    <td>100일 여행</td>
-                                                    <td>2015.09.09</td>
-                                                    <td>2 Days</td>
-                                                    <td>강원도</td>
-                                                    <td>유라랑 강원도로 떠나는 100일 여행 출발출발 </td>
-                                                    <td><span class="bold theme-font">Complete</span></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                                    <!-- end Item -->
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="portlet light">
-                                    <div class="portlet-title">
-                                        <div class="caption caption-md">
-                                            <span class="caption-subject font-blue-madison bold uppercase">Friends</span>
-                                        </div>
-                                    </div>
-                                    <div class="portlet-body">
-                                    </div>
+                        <div class="col-sm-6 md-margin-bottom-20">
+                            <div class="panel panel-profile no-bg">
+                                <div class="panel-heading overflow-h">
+                                    <h2 class="panel-title heading-sm pull-left">
+                                        <i class="fa fa-briefcase"></i>Upcoming Events
+                                    </h2>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="portlet light">
-                                    <div class="portlet-title">
-                                        <div class="caption caption-md">
-											<span class="caption-subject font-blue-madison bold uppercase">
-												travle stats
-											</span>
-                                        </div>
-                                    </div>
-                                    <div class="portlet-body">
-                                        <div class="table-scrollable table-scrollable-borderless">
-                                            <table class="table table-hover table-light">
-                                                <thead>
-                                                <tr>
-                                                    <th>year</th>
-                                                    <th>trips</th>
-                                                    <th>days</th>
-                                                    <th>cites</th>
-                                                    <th>Contries</th>
-                                                    <th>distance</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <th>2014</th>
-                                                    <th>3</th>
-                                                    <th>14</th>
-                                                    <th>3</th>
-                                                    <th>3</th>
-                                                    <th>123123123km</th>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                                <div id="scrollbar2" class="panel-body no-padding mCustomScrollbar" data-mcs-theme="minimal-dark">
+                                    <div class="profile-event">
+                                        <div class="profile-event">
+                                            <div class="date-formats">
+                                                <span>25</span>
+                                                <small>05,2014</small>
+                                            </div>
+                                            <div class="overflow-h">
+                                                <h3 class="heading-xs"><a href="#">GitHub seminars inJapan</a></h3><p>깃허브 세미나가잇어? 정말이야 대박인데?</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--END PROFILE CONTENT-->
+                    <hr>
+                    <div class="panel panel-profile">
+                        <div class="panel-heading overflow-h">
+                            <h2 class="panel-title heading-sm pull-left"><i class="fa fa-tasks"></i>Plans</h2>
+                            <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-dark btn-u-xs pull-right">View All</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-search-v1 margin-bottom-20">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th class="hidden-sm">Description</th>
+                                            <th>Destination</th>
+                                            <th style="width:100px">Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#">나홀로 여행</a>
+                                            </td>
+                                            <td class="td-width">
+                                                나혼자 떠나는 여행
+                                            </td>
+                                            <td>
+                                                <div class="m-marker">
+                                                    <i class="color-green fa fa-map-marker"></i> Korea suwon
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="btn-u btn-u-red btn-block btn-u-xs">Up Comming</button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <!--END PAGE CONTENT-->
         </div>
     </div>
 </div>
 
-
-
-<!--[if lt IE 9]>
-<script src="assets/global/plugins/respond.min.js"></script>
-<script src="assets/global/plugins/excanvas.min.js"></script>
-<![endif]-->
-<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-<script src="assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-<!-- END CORE PLUGINS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL PLUGINS -->
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
-<script src="assets/admin/layout4/scripts/layout.js" type="text/javascript"></script>
-<script src="assets/admin/layout4/scripts/demo.js" type="text/javascript"></script>
-<script src="assets/admin/pages/scripts/profile.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL SCRIPTS -->
-<script>
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+<script type="text/javascript" src="assets/plugins/counter/waypoints.min.js"></script>
+<script type="text/javascript" src="assets/plugins/counter/jquery.counterup.min.js"></script>
+<script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- JS Customization -->
+<script type="text/javascript" src="assets/js/custom.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+<script type="text/javascript">
     jQuery(document).ready(function() {
-        // initiate layout and plugins
-        Metronic.init(); // init metronic core components
-        Layout.init(); // init current layout
-        Demo.init(); // init demo features\
-        Profile.init(); // init page demo
+        App.init();
+        App.initCounter();
+        App.initScrollBar();
+        Datepicker.initDatepicker();
     });
 </script>
-<!-- END JAVASCRIPTS -->
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.js"></script>
+<script src="assets/plugins/html5shiv.js"></script>
+<script src="assets/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
+
 </body>
 </html>
