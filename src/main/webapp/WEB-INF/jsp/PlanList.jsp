@@ -50,7 +50,7 @@
 </head>
 <body class="header-fixed">
     <div class="wrapper">
-       <jsp:include page="hello.jsp"/>
+
         <div class="bradcrumbs" style="margin-top: 10em;">
             <div class="container">
                 <div class="row">
